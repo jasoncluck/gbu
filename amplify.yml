@@ -13,9 +13,10 @@ frontend:
   artifacts:
     baseDirectory: .next
     files:
-      - '**/*'
+      - "app/**/*"
   cache:
     paths:
       - .next/cache/**/*
       - .npm/**/*
       - node_modules/**/*
+

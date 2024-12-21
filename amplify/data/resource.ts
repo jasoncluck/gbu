@@ -12,6 +12,16 @@ const schema = a.schema({
       content: a.string(),
     })
     .authorization((allow) => [allow.authenticated()]),
+  Post: a.customType({
+    id: a.string().required(),
+    channel: a.string().required(),
+    title: a.string().required(),
+    publishedAt: a.date(),
+    etag: a.string(),
+    thumbnailMaxResUrl: a.string(),
+    thumbnailDefault: a.string(),
+    description: a.string(),
+  }),
 });
 
 export type Schema = ClientSchema<typeof schema>;
